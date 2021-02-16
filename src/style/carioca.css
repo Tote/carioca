@@ -1,0 +1,7 @@
+:root{
+    --card-height: 100px;
+    --card-width: 75px;
+}
+html{
+    height: 100%;
+}

@@ -1,0 +1,11 @@
+cr-hand{
+    display: inline-flex;
+    border: solid;
+    padding: 3px;
+    
+}
+
+cr-hand.vertical{
+    flex-direction: column;
+    
+}

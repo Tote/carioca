@@ -1,0 +1,48 @@
+cr-card{
+    display : inline-flex;
+    height  : var(--card-height);
+    width   : var(--card-width);
+
+    border  : solid 2px black;
+    border-radius: 5px;
+    background: white;
+
+    flex-direction: column;
+
+    font-size   : calc(var(--card-width) * 0.5);
+    text-align  : center;
+}
+/* cr-card.covered{
+    background: navy;
+} */
+cr-card.covered::before{
+    content: '🂠';
+    background: navy;
+    color: white;
+    font-size: var(--card-height);
+    line-height: var(--card-height);
+}
+cr-card.suite-clubs,
+cr-card.suite-spades{
+    color: black;
+}
+cr-card.suite-hearts,
+cr-card.suite-diamonds{
+    color: red;
+}
+cr-card.suite-clubs::before{
+    content : '♣️';
+}
+cr-card.suite-hearts::before{
+    content : '♥️';
+}
+cr-card.suite-spades::before{
+    content : '♠️';
+}
+cr-card.suite-diamonds::before{
+    content : '♦️';
+}
+cr-card.joker::before{
+    content: '🃟 ';
+    font-size: calc(var(--card-width) * 0.9); 
+}
