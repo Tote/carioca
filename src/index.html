@@ -8,71 +8,73 @@
     <link rel="stylesheet" href="./style/CrBoard.css">
     <link rel="stylesheet" href="./style/CrHand.css">
     <link rel="stylesheet" href="./style/CrCard.css">
+    <script type="module" src="components/CrCard.js"></script>
+    <script type="module" src="components/CrHand.js"></script>
     <title>Carioca</title>
 </head>
 <body class="board">
     <cr-hand class="horizontal">
-        <cr-card class="suite-clubs" draggable="true">A</cr-card>
-        <cr-card class="suite-clubs">2</cr-card>
-        <cr-card class="suite-clubs">3</cr-card>
-        <cr-card class="suite-clubs">4</cr-card>
-        <cr-card class="suite-clubs">5</cr-card>
-        <cr-card class="suite-clubs">6</cr-card>
-        <cr-card class="suite-clubs">7</cr-card>
-        <cr-card class="suite-clubs">8</cr-card>
-        <cr-card class="suite-clubs">9</cr-card>
-        <cr-card class="suite-clubs">10</cr-card>
-        <cr-card class="suite-clubs">J</cr-card>
-        <cr-card class="suite-clubs">Q</cr-card>
-        <cr-card class="suite-clubs">K</cr-card>
+        <cr-card id="C-A" class="suite-clubs">A</cr-card>
+        <cr-card id="C-2" class="suite-clubs">2</cr-card>
+        <cr-card id="C-3" class="suite-clubs">3</cr-card>
+        <cr-card id="C-4" class="suite-clubs">4</cr-card>
+        <cr-card id="C-5" class="suite-clubs">5</cr-card>
+        <cr-card id="C-6" class="suite-clubs">6</cr-card>
+        <cr-card id="C-7" class="suite-clubs">7</cr-card>
+        <cr-card id="C-8" class="suite-clubs">8</cr-card>
+        <cr-card id="C-9" class="suite-clubs">9</cr-card>
+        <cr-card id="C-10" class="suite-clubs">10</cr-card>
+        <cr-card id="C-J" class="suite-clubs">J</cr-card>
+        <cr-card id="C-Q" class="suite-clubs">Q</cr-card>
+        <cr-card id="C-K" class="suite-clubs">K</cr-card>
     </cr-hand>
     <cr-hand class="horizontal">
-        <cr-card class="suite-hearts">A</cr-card>
-        <cr-card class="suite-hearts">2</cr-card>
-        <cr-card class="suite-hearts">3</cr-card>
-        <cr-card class="suite-hearts">4</cr-card>
-        <cr-card class="suite-hearts">5</cr-card>
-        <cr-card class="suite-hearts">6</cr-card>
-        <cr-card class="suite-hearts">7</cr-card>
-        <cr-card class="suite-hearts">8</cr-card>
-        <cr-card class="suite-hearts">9</cr-card>
-        <cr-card class="suite-hearts">10</cr-card>
-        <cr-card class="suite-hearts">J</cr-card>
-        <cr-card class="suite-hearts">Q</cr-card>
-        <cr-card class="suite-hearts">K</cr-card>
+        <cr-card id="H-A" class="suite-hearts">A</cr-card>
+        <cr-card id="H-2" class="suite-hearts">2</cr-card>
+        <cr-card id="H-3" class="suite-hearts">3</cr-card>
+        <cr-card id="H-4" class="suite-hearts">4</cr-card>
+        <cr-card id="H-5" class="suite-hearts">5</cr-card>
+        <cr-card id="H-6" class="suite-hearts">6</cr-card>
+        <cr-card id="H-7" class="suite-hearts">7</cr-card>
+        <cr-card id="H-8" class="suite-hearts">8</cr-card>
+        <cr-card id="H-9" class="suite-hearts">9</cr-card>
+        <cr-card id="H-10" class="suite-hearts">10</cr-card>
+        <cr-card id="H-J" class="suite-hearts">J</cr-card>
+        <cr-card id="H-Q" class="suite-hearts">Q</cr-card>
+        <cr-card id="H-K" class="suite-hearts">K</cr-card>
     </cr-hand>
     <cr-hand class="horizontal">
-        <cr-card class="suite-spades">A</cr-card>
-        <cr-card class="suite-spades">2</cr-card>
-        <cr-card class="suite-spades">3</cr-card>
-        <cr-card class="suite-spades">4</cr-card>
-        <cr-card class="suite-spades">5</cr-card>
-        <cr-card class="suite-spades">6</cr-card>
-        <cr-card class="suite-spades">7</cr-card>
-        <cr-card class="suite-spades">8</cr-card>
-        <cr-card class="suite-spades">9</cr-card>
-        <cr-card class="suite-spades">10</cr-card>
-        <cr-card class="suite-spades">J</cr-card>
-        <cr-card class="suite-spades">Q</cr-card>
-        <cr-card class="suite-spades">K</cr-card>
+        <cr-card id="S-A" class="suite-spades">A</cr-card>
+        <cr-card id="S-2" class="suite-spades">2</cr-card>
+        <cr-card id="S-3" class="suite-spades">3</cr-card>
+        <cr-card id="S-4" class="suite-spades">4</cr-card>
+        <cr-card id="S-5" class="suite-spades">5</cr-card>
+        <cr-card id="S-6" class="suite-spades">6</cr-card>
+        <cr-card id="S-7" class="suite-spades">7</cr-card>
+        <cr-card id="S-8" class="suite-spades">8</cr-card>
+        <cr-card id="S-9" class="suite-spades">9</cr-card>
+        <cr-card id="S-10" class="suite-spades">10</cr-card>
+        <cr-card id="S-J" class="suite-spades">J</cr-card>
+        <cr-card id="S-Q" class="suite-spades">Q</cr-card>
+        <cr-card id="S-K" class="suite-spades">K</cr-card>
     </cr-hand>
     <cr-hand class="horizontal">
-        <cr-card class="suite-diamonds">A</cr-card>
-        <cr-card class="suite-diamonds">2</cr-card>
-        <cr-card class="suite-diamonds">3</cr-card>
-        <cr-card class="suite-diamonds">4</cr-card>
-        <cr-card class="suite-diamonds">5</cr-card>
-        <cr-card class="suite-diamonds">6</cr-card>
-        <cr-card class="suite-diamonds">7</cr-card>
-        <cr-card class="suite-diamonds">8</cr-card>
-        <cr-card class="suite-diamonds">9</cr-card>
-        <cr-card class="suite-diamonds">10</cr-card>
-        <cr-card class="suite-diamonds">J</cr-card>
-        <cr-card class="suite-diamonds">Q</cr-card>
-        <cr-card class="suite-diamonds">K</cr-card>
+        <cr-card id="D-A" class="suite-diamonds">A</cr-card>
+        <cr-card id="D-2" class="suite-diamonds">2</cr-card>
+        <cr-card id="D-3" class="suite-diamonds">3</cr-card>
+        <cr-card id="D-4" class="suite-diamonds">4</cr-card>
+        <cr-card id="D-5" class="suite-diamonds">5</cr-card>
+        <cr-card id="D-6" class="suite-diamonds">6</cr-card>
+        <cr-card id="D-7" class="suite-diamonds">7</cr-card>
+        <cr-card id="D-8" class="suite-diamonds">8</cr-card>
+        <cr-card id="D-9" class="suite-diamonds">9</cr-card>
+        <cr-card id="D-10" class="suite-diamonds">10</cr-card>
+        <cr-card id="D-J" class="suite-diamonds">J</cr-card>
+        <cr-card id="D-Q" class="suite-diamonds">Q</cr-card>
+        <cr-card id="D-K" class="suite-diamonds">K</cr-card>
     </cr-hand>
     <cr-hand class="vertical">
-        <cr-card class="joker"></cr-card>
+        <cr-card id="J-1" class="joker"></cr-card>
         <cr-card class="covered"></cr-card>
     </cr-hand>
 </body>
