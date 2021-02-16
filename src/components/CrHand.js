@@ -1,11 +1,19 @@
+import CrCard from './CrCard.js'
+
 export default class CrHand extends HTMLElement {
     constructor(){
         super()
         this.addEventListener('dragover', e => e.preventDefault())
-        this.addEventListener('drop', this.ondrop.bind(this))
+        this.addEventListener('dragenter', this.dragEnter.bind(this))
+        this.addEventListener('drop', this.drop.bind(this))
     }
-    ondrop(e){
+    dragEnter(e){
+        this.appendChild(CrCard.PLACEHOLDER)
+    }
+    drop(e){
         e.preventDefault()
+        this.removeChild(CrCard.PLACEHOLDER)
+
         const cardId = e.dataTransfer.getData('text/plain')
         const card = document.getElementById(cardId)
 

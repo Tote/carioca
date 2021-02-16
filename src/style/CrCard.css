@@ -12,9 +12,6 @@ cr-card{
     font-size   : calc(var(--card-width) * 0.5);
     text-align  : center;
 }
-/* cr-card.covered{
-    background: navy;
-} */
 cr-card.covered::before{
     content: '🂠';
     background: navy;
@@ -45,4 +42,11 @@ cr-card.suite-diamonds::before{
 cr-card.joker::before{
     content: '🃟 ';
     font-size: calc(var(--card-width) * 0.9); 
+}
+.card-placeholder{
+    width   : var(--card-width);
+    height  : var(--card-height);
+    border  : dotted 3px white;
+    border-radius: 10px;
+    background: #FFF8
 }
