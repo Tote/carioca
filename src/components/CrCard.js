@@ -31,21 +31,6 @@ export default class CrCard extends HTMLElement {
 
         this.parentElement.insertBefore(card,this)
     }
-    dragEnter(e){
-        this.parentElement.insertBefore(CrCard.PLACEHOLDER,this)
-    }
-    dragLeave(e){
-        this.parentElement.removeChild(CrCard.PLACEHOLDER)
-    }
-    drop(e){
-        e.preventDefault()
-        e.stopPropagation()
-        this.dragLeave(e)
-        const cardId = e.dataTransfer.getData('text/plain')
-        const card = document.getElementById(cardId)
-
-        this.parentElement.insertBefore(card,this)
-    }
 }
 customElements.define('cr-card', CrCard)
 
