@@ -31,9 +31,28 @@ export default class CrCard extends HTMLElement {
 
         this.parentElement.insertBefore(card,this)
     }
+    dragEnter(e){
+        this.parentElement.insertBefore(CrCard.PLACEHOLDER,this)
+    }
+    dragLeave(e){
+        this.parentElement.removeChild(CrCard.PLACEHOLDER)
+    }
+    drop(e){
+        e.preventDefault()
+        e.stopPropagation()
+        this.dragLeave(e)
+        const cardId = e.dataTransfer.getData('text/plain')
+        const card = document.getElementById(cardId)
+
+        this.parentElement.insertBefore(card,this)
+    }
 }
 customElements.define('cr-card', CrCard)
 
 CrCard.PLACEHOLDER.classList.add('card-placeholder')
+<<<<<<< HEAD
 CrCard.PLACEHOLDER.ondrop       = e => CrCard.PLACEHOLDER.nextElementSibling.drop(e)
 CrCard.PLACEHOLDER.ondragenter  = e => e.stopPropagation()
+=======
+CrCard.PLACEHOLDER.ondrop       = e => CrCard.PLACEHOLDER.nextElementSibling.drop(e)
+>>>>>>> 2325cfa18c97a79f338625b86947bf5e779d63dc
