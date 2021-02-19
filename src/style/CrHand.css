@@ -1,11 +1,37 @@
-cr-hand{
+cr-hand,
+cr-trio{
     display: inline-flex;
     border: solid;
     padding: 3px;
-    
+    min-height: var(--card-height);  
 }
 
 cr-hand.vertical{
     flex-direction: column;
     
 }
+
+cr-trio{
+    width: calc(3 * var(--card-width))
+}
+
+cr-trio.validation-ok{
+    border-color: greenyellow;
+}
+
+cr-trio.validation-failed{
+    border-color: red;
+}
+
+cr-trio.validation-inprogress{
+    border-color: grey;
+}
+
+cr-trio::before{
+    content: 'Trio';
+    font-size: 3em;
+    color: #FFFA;
+    text-align: center;
+    position: absolute;
+    z-index: -1;
+}  

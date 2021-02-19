@@ -16,6 +16,7 @@ export default class CrHand extends HTMLElement {
 
         const cardId = e.dataTransfer.getData('text/plain')
         const card = document.getElementById(cardId)
+        card.parentElement.removeChild(card)
 
         this.appendChild(card)
     }

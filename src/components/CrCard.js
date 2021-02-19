@@ -11,6 +11,9 @@ export default class CrCard extends HTMLElement {
         this.addEventListener('drop', this.drop.bind(this))
 
         this.placeholder = null
+        
+        this.value = this.innerText
+        this.suite = this.getSuite()
     }
     dragStart(e){
         e.dataTransfer.setData('text/plain', this.id)
@@ -28,12 +31,31 @@ export default class CrCard extends HTMLElement {
         this.dragLeave(e)
         const cardId = e.dataTransfer.getData('text/plain')
         const card = document.getElementById(cardId)
+        card.parentElement.removeChild(card)
 
         this.parentElement.insertBefore(card,this)
+    }
+    
+    getSuite(){
+        const classAttr = this.getAttribute('class')
+        
+        switch(classAttr){
+            case 'joker':
+                this.value = 'joker'
+                return 'joker'
+            case 'covered':
+                return null
+            default:
+                return classAttr.substring(6,classAttr.length)
+        }
     }
 }
 customElements.define('cr-card', CrCard)
 
 CrCard.PLACEHOLDER.classList.add('card-placeholder')
-CrCard.PLACEHOLDER.ondrop       = e => CrCard.PLACEHOLDER.nextElementSibling.drop(e)
 CrCard.PLACEHOLDER.ondragenter  = e => e.stopPropagation()
+CrCard.PLACEHOLDER.ondrop       = e => {
+    if(!!CrCard.PLACEHOLDER.nextElementSibling){
+        CrCard.PLACEHOLDER.nextElementSibling.drop(e)
+    }
+} 
