@@ -53,9 +53,14 @@ export default class CrCard extends HTMLElement {
 customElements.define('cr-card', CrCard)
 
 CrCard.PLACEHOLDER.classList.add('card-placeholder')
+<<<<<<< HEAD
 CrCard.PLACEHOLDER.ondragenter  = e => e.stopPropagation()
 CrCard.PLACEHOLDER.ondrop       = e => {
     if(!!CrCard.PLACEHOLDER.nextElementSibling){
         CrCard.PLACEHOLDER.nextElementSibling.drop(e)
     }
 } 
+=======
+CrCard.PLACEHOLDER.ondrop       = e => CrCard.PLACEHOLDER.nextElementSibling.drop(e)
+CrCard.PLACEHOLDER.ondragenter  = e => e.stopPropagation()
+>>>>>>> 96d32c274f57651c5108a27c45a21e7e43d35097
